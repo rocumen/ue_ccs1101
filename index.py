@@ -1,22 +1,21 @@
-name = "reynald"
-lastName= "ocumen"
 
-def add(a, b):
-    return a + b
 
-def subtract(a, b):
-    return a - b
 
-def multiply(a, b):
-    return a * b
+def age():
+    
+    while True:
 
-def divide(a, b):
-    if b == 0:
-        return "Error: Division by zero"
-    return a / b
+        try:
 
-# Example usage:
-print("Addition:", add(5, 3))
-print("Subtraction:", subtract(5, 3))
-print("Multiplication:", multiply(5, 3))
-print("Division:", divide(5, 3))
+            choice = int(input("Enter your age: "))\
+            
+            if choice < 0:
+                print("Age must be more than 0")
+                continue
+            
+            print(f"Your age is {choice}")
+            break
+    
+        except ValueError:
+            print("Invalid input, must number")
+            continue
